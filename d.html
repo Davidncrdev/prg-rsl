@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Segovia - Profesor de Música Profesional</title>
+  <meta name="description" content="Portfolio profesional de David Segovia, profesor de música especializado en Guitarra Eléctrica, Batería y Bajo en Rockschool Málaga">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      --primary-gold: #D4AF37;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #111111;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .gradient-gold {
+      background: linear-gradient(135deg, var(--primary-gold), #B8860B);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Canvas partículas */
+    #particles {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--primary-gold);
+    }
+
+    .card {
+      background: #ffffffcc;
+      border: 1px solid #f1f1f1;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .skill-bar {
+      background: var(--primary-gold);
+      height: 100%;
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <canvas id="particles"></canvas>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur border-b border-yellow-300">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold gradient-gold flex items-center">
+        <i data-lucide="music" class="w-8 h-8 mr-2 text-yellow-500"></i>
+        David Segovia
+      </div>
+      <div class="hidden md:flex space-x-8 font-medium">
+        <a href="#about" class="hover:text-yellow-600">Sobre Mí</a>
+        <a href="#experience" class="hover:text-yellow-600">Experiencia</a>
+        <a href="#skills" class="hover:text-yellow-600">Habilidades</a>
+        <a href="#contact" class="hover:text-yellow-600">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="min-h-screen flex items-center justify-center text-center px-6">
+    <div>
+      <h1 class="text-5xl md:text-7xl font-bold mb-6">
+        <span class="text-black">David</span>
+        <span class="gradient-gold"> Segovia</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-700 mb-8">
+        Profesor de Música Profesional | Guitarra, Batería & Bajo
+      </p>
+      <button class="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition">
+        Conóceme
+      </button>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="section-title">Sobre Mí</h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div class="space-y-6 text-gray-700 text-lg leading-relaxed">
+          <p>¡Hola! Soy David Segovia, profesor de música con una amplia trayectoria y pasión genuina por la enseñanza musical. Desde 2014, formo parte del prestigioso equipo de <span class="text-yellow-600 font-semibold">Rockschool Málaga</span>.</p>
+          <p>Con más de 10 años de experiencia, he guiado a estudiantes de todas las edades en su viaje musical. Mi formación incluye una graduación en <span class="text-yellow-600 font-semibold">Educación Primaria por la Universidad de Málaga</span>, lo que me proporciona herramientas pedagógicas sólidas.</p>
+          <p>Mi filosofía se basa en adaptar cada clase a las necesidades individuales, fomentando tanto la técnica como la creatividad.</p>
+        </div>
+        <div class="card">
+          <div class="grid grid-cols-2 gap-8 text-center">
+            <div>
+              <div class="text-4xl font-bold gradient-gold mb-2">10+</div>
+              <div class="text-sm text-gray-600">Años de Experiencia</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold gradient-gold mb-2">3</div>
+              <div class="text-sm text-gray-600">Instrumentos</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold gradient-gold mb-2">500+</div>
+              <div class="text-sm text-gray-600">Estudiantes</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold gradient-gold mb-2">2014</div>
+              <div class="text-sm text-gray-600">Rockschool Málaga</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="section-title">Experiencia</h2>
+      <div class="max-w-4xl mx-auto space-y-8">
+        <div class="card">
+          <h3 class="text-2xl font-bold text-yellow-600 mb-2">Profesor de Música</h3>
+          <p class="text-lg text-gray-700 mb-2">Rockschool Málaga (2014 - Presente)</p>
+          <ul class="list-disc pl-6 text-gray-700 space-y-2">
+            <li>Enseñanza en Guitarra Eléctrica, Batería y Bajo</li>
+            <li>Preparación para exámenes oficiales Rockschool</li>
+            <li>Desarrollo de programas educativos personalizados</li>
+            <li>Mentoría a estudiantes de diferentes edades</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 class="text-2xl font-bold text-yellow-600 mb-2">Graduado en Educación Primaria</h3>
+          <p class="text-lg text-gray-700 mb-2">Universidad de Málaga - Título Oficial</p>
+          <p class="text-gray-700">Formación pedagógica sólida que complementa mis habilidades musicales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="section-title">Habilidades</h2>
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-2xl font-bold text-yellow-600 mb-6">Instrumentos</h3>
+          <div class="space-y-6">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-gray-800 font-medium">Guitarra Eléctrica</span>
+                <span class="text-yellow-600">95%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="skill-bar rounded-full" style="width: 95%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-gray-800 font-medium">Batería</span>
+                <span class="text-yellow-600">90%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="skill-bar rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-gray-800 font-medium">Bajo</span>
+                <span class="text-yellow-600">88%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="skill-bar rounded-full" style="width: 88%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-yellow-600 mb-6">Habilidades Pedagógicas</h3>
+          <div class="space-y-6">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-gray-800 font-medium">Enseñanza Personalizada</span>
+                <span class="text-yellow-600">98%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="skill-bar rounded-full" style="width: 98%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-gray-800 font-medium">Motivación Estudiantil</span>
+                <span class="text-yellow-600">96%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="skill-bar rounded-full" style="width: 96%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-gray-800 font-medium">Preparación Exámenes</span>
+                <span class="text-yellow-600">94%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="skill-bar rounded-full" style="width: 94%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="section-title">Lo Que Dicen Mis Estudiantes</h2>
+      <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+        <div class="card">
+          <h4 class="font-semibold text-gray-800 mb-2">María G.</h4>
+          <p class="text-sm text-gray-500 mb-4">Estudiante de Guitarra</p>
+          <p class="text-gray-700 italic">"David tiene una paciencia increíble y sabe cómo motivarte. Gracias a él, ahora toco las canciones que siempre soñé."</p>
+        </div>
+        <div class="card">
+          <h4 class="font-semibold text-gray-800 mb-2">Javier R.</h4>
+          <p class="text-sm text-gray-500 mb-4">Estudiante de Batería</p>
+          <p class="text-gray-700 italic">"Las clases son súper dinámicas. David adapta el contenido a tu ritmo y hace que aprender sea divertido."</p>
+        </div>
+        <div class="card">
+          <h4 class="font-semibold text-gray-800 mb-2">Ana L.</h4>
+          <p class="text-sm text-gray-500 mb-4">Estudiante de Bajo</p>
+          <p class="text-gray-700 italic">"Excelente profesor. Su metodología es clara y efectiva. Recomiendo sus clases al 100%."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partículas -->
+  <script>
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+    let particlesArray;
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    class Particle {
+      constructor(x, y, size, speedX, speedY) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.speedX = speedX;
+        this.speedY = speedY;
+        this.color = "rgba(212, 175, 55, 0.6)";
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
+        if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+    }
+
+    function init() {
+      particlesArray = [];
+      for (let i = 0; i < 60; i++) {
+        let size = Math.random() * 3 + 1;
+        let x = Math.random() * canvas.width;
+        let y = Math.random() * canvas.height;
+        let speedX = (Math.random() - 0.5) * 0.5;
+        let speedY = (Math.random() - 0.5) * 0.5;
+        particlesArray.push(new Particle(x, y, size, speedX, speedY));
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particlesArray.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    init();
+    animate();
+
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      init();
+    });
+  </script>
+</body>
+</html>
